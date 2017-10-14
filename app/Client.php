@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 
 class Client extends Authenticatable
 {
@@ -29,7 +30,7 @@ class Client extends Authenticatable
         'password', 'remember_token',
     ];
 
-    
+
     public function company() {
 
         return $this->belongsTo(Company::class);
