@@ -27,7 +27,7 @@ class UserController extends Controller
 
     }
 
-    public function edit() {
+    public function update() {
         //
     }
 
@@ -41,7 +41,7 @@ class UserController extends Controller
 
     public function store() {
 
-        //
+        // Validate and apply roles/permissions here
 
     }
 

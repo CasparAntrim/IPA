@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
+
+    public function __construct() {
+
+        $this->middleware('auth');
+        $this->middleware(['role:super-admin|admin|intake']);
+
+    }
+
+
     public function create() {
 
         $role = Role::get('client');

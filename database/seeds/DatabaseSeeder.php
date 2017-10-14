@@ -57,7 +57,11 @@ class DatabaseSeeder extends Seeder
 
                 // Create 4 users for every role
                 for($i = 0; $i < 4; $i++) {
-                    $this->createUser($role);
+                    if($role->name == 'client') {
+                        $this->createClient();
+                    } else {
+                        $this->createUser($role);
+                    }
                 }
 
             }
@@ -91,5 +95,11 @@ class DatabaseSeeder extends Seeder
             $this->command->warn('Username: ' . $user->email);
             $this->command->warn('Password: "secret"');
         }
+    }
+
+    private function createClient() {
+        $client = factory(Client::class)->create();
+        $client->assignRole('client');
+
     }
 }

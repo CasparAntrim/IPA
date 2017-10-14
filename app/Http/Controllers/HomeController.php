@@ -24,7 +24,11 @@ class HomeController extends Controller
     public function showDash()
     {
 
-        return view('dash');
+        if(Auth::user()->hasRole('client')) {
+            return view('client.dash');
+        }
+
+        return view('user.dash');
 
     }
 }
