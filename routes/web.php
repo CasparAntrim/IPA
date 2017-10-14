@@ -21,6 +21,7 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@showDash')->name('dashboard');
 Route::get('/profile', 'ProfileController@show')->name('profile');
 Route::get('/profile-edit', 'ProfileController@edit')->name('edit-profile');
+Route::get('/account-info', 'InfoController@show')->name('account-info');
 
 // Routes with permissions/roles applied
 Route::middleware(['role:super-admin|admin'])->group(function () {

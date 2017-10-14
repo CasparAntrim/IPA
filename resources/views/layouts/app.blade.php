@@ -69,6 +69,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{{ route('profile') }}">View Profile</a>
                             <a class="dropdown-item" href="{{ route('edit-profile') }}">Edit Profile</a>
+                            <a class="dropdown-item" href="{{ route('account-info') }}">Account</a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                                 Logout
                             </a>
